@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/laptop-design/static/css/main.cf890fdb.css",
-    "main.js": "/laptop-design/static/js/main.a1f96126.js",
+    "main.css": "/laptop-design/static/css/main.2d52c2c6.css",
+    "main.js": "/laptop-design/static/js/main.9a0ab323.js",
+    "static/media/hp_Logo.png": "/laptop-design/static/media/hp_Logo.2c61005ac0d76eefa795.png",
+    "static/media/coverBlur.jpg": "/laptop-design/static/media/coverBlur.4382532e1c94bea4ff5a.jpg",
+    "static/media/cover.jpg": "/laptop-design/static/media/cover.36c0bb02038565e08f97.jpg",
+    "static/media/Profile.png": "/laptop-design/static/media/Profile.33e44432bbee4b4bfa0b.png",
+    "static/media/webcam.png": "/laptop-design/static/media/webcam.18efcd4c77bda70a474e.png",
     "index.html": "/laptop-design/index.html",
-    "main.cf890fdb.css.map": "/laptop-design/static/css/main.cf890fdb.css.map",
-    "main.a1f96126.js.map": "/laptop-design/static/js/main.a1f96126.js.map"
+    "main.2d52c2c6.css.map": "/laptop-design/static/css/main.2d52c2c6.css.map",
+    "main.9a0ab323.js.map": "/laptop-design/static/js/main.9a0ab323.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf890fdb.css",
-    "static/js/main.a1f96126.js"
+    "static/css/main.2d52c2c6.css",
+    "static/js/main.9a0ab323.js"
   ]
 }
