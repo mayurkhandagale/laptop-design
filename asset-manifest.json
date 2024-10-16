@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/laptop-design/static/css/main.cf890fdb.css",
+    "main.js": "/laptop-design/static/js/main.a1f96126.js",
+    "index.html": "/laptop-design/index.html",
+    "main.cf890fdb.css.map": "/laptop-design/static/css/main.cf890fdb.css.map",
+    "main.a1f96126.js.map": "/laptop-design/static/js/main.a1f96126.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cf890fdb.css",
+    "static/js/main.a1f96126.js"
+  ]
+}
