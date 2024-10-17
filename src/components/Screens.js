@@ -3,6 +3,7 @@ import Screen1 from './Screen1';
 import Screen2 from './Screen2';
 import Screen3 from './Screen3';
 import ShutDown from './ShutDown';
+import Desktop from './Desktop';
 
 
 const Screens = ({
@@ -18,7 +19,7 @@ const Screens = ({
   const [second, setSecond] = useState(false);
   const [third, setThird] = useState(false);
   const [fourth, setFourth] = useState(false);
-  const [shutDown, setShutDown] = useState(true);
+  const [shutDown, setShutDown] = useState(false);
 
   useEffect(() => {
     if (power) {
@@ -45,22 +46,6 @@ const Screens = ({
     }
   }, [shuttingDown]);
 
-  const ScreenSequence = () => {
-    if (fourth) {
-      return (
-        <div>Fourth Screen</div>
-      )
-    } else if (third) {
-      return <Screen3 fingerScan={fingerScan} handleFourth={handleFourth} />
-    } else if (second) {
-      return <Screen2 handleClick={handleClick} />
-    } else if (first) {
-      return <Screen1 />
-    } else if (shutDown) {
-      return <ShutDown />
-    } else return null;
-  };
-
   const handleClick = () => {
     setThird(true);
   };
@@ -80,6 +65,27 @@ const Screens = ({
       }, 2000);
     }
   }, [third, fingerScan]);
+
+  const ScreenSequence = () => {
+    if (fourth) {
+      return <Desktop
+        handleCelebrate={handleCelebrate}
+        celebrate={celebrate}
+        handleShutDown={handleShutDown}
+        handleRestart={handleRestart}
+        handleSleep={handleSleep}
+      />
+    } else if (third) {
+      return <Screen3 fingerScan={fingerScan} handleFourth={handleFourth} />
+    } else if (second) {
+      return <Screen2 handleClick={handleClick} />
+    } else if (first) {
+      return <Screen1 />
+    } else if (shutDown) {
+      return <ShutDown />
+    } else return null;
+  };
+
 
   return (
     <div className='screen bg-slate-800 w-[95%] h-5/6'>

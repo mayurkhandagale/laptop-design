@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import profile from "../assets/Profile.png";
 import user from "../assets/user.png";
 import { BiFingerprint } from "react-icons/bi";
+
 const Screen3 = ({ fingerScan, handleFourth }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [welcome, setWelcome] = useState(false);
