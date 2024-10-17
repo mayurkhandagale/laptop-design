@@ -19,12 +19,58 @@ const Laptop = () => {
     }
   };
 
+  const handlePower = () => {
+    setFingerScan(false);
+    if (power) {
+      setShuttingDown(true);
+      setTimeout(() => {
+        setPower(!power);
+        setShuttingDown(false);
+      }, 2000);
+    } else {
+      setPower(!power);
+    }
+  };
+
+  const handleFingerScan = () => {
+    setFingerScan(true);
+  }
+
+  const handleCelebrate = (value) => {
+    setcelebrate(value);
+  }
+
+  const handleShutDown = () => {
+    setShuttingDown(true);
+    setTimeout(() => {
+      setPower(false);
+      setShuttingDown(false);
+    }, 2000);
+  }
+
+  const handleRestart = () => {
+    setPower(false);
+    setTimeout(() => {
+      setPower(true);
+    }, 1000);
+  }
 
   return (
     <div className="full-screen flex sm:flex-row xs:flex-col xs:gap-12 md:gap-24 lg:gap-40 items-center justify-center hover:cursor-pointer w-screen h-screen">
       <div className="laptop-wrapper flex flex-col  xs:w-4/5 xs:h-3/4 sm:w-1/2 sm:h-[65%] md:h-3/4 lg:h-4/5 xl:h-[95vh] xl:w-[42%]">
-        <TopPanel />
-        <BasePanel />
+        <TopPanel
+          power={power}
+          fingerScan={fingerScan}
+          handleCelebrate={handleCelebrate}
+          celebrate={celebrate}
+          handleShutDown={handleShutDown}
+          handleRestart={handleRestart}
+          shuttingDown={shuttingDown}
+        />
+        <BasePanel
+          handlePower={handlePower}
+          handleFingerScan={handleFingerScan}
+        />
       </div>
       <button
         onClick={keyboardToggle}
