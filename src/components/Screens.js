@@ -51,9 +51,9 @@ const Screens = ({
         <div>Fourth Screen</div>
       )
     } else if (third) {
-      return <Screen3 />
+      return <Screen3 fingerScan={fingerScan} handleFourth={handleFourth} />
     } else if (second) {
-      return <Screen2 />
+      return <Screen2 handleClick={handleClick} />
     } else if (first) {
       return <Screen1 />
     } else if (shutDown) {

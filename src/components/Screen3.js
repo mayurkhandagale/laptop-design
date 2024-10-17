@@ -7,6 +7,7 @@ const Screen3 = ({ fingerScan, handleFourth }) => {
   const [welcome, setWelcome] = useState(false);
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
+
   const onSubmit = () => {
     if (password !== "1234") {
       setError(true);
@@ -18,6 +19,7 @@ const Screen3 = ({ fingerScan, handleFourth }) => {
       }, 2000);
     }
   };
+
   useEffect(() => {
     if (fingerScan) {
       setWelcome(true);
@@ -25,6 +27,7 @@ const Screen3 = ({ fingerScan, handleFourth }) => {
       setWelcome(false);
     }
   }, [fingerScan]);
+
   const Left = () => {
     return (
       <div className="left basis-2/12 flex flex-col justify-end">
@@ -51,6 +54,7 @@ const Screen3 = ({ fingerScan, handleFourth }) => {
       </div>
     );
   };
+
   const Right = () => {
     return (
       <div className="right basis-2/12 flex flex-col justify-end">
