@@ -1,18 +1,22 @@
 {
   "files": {
-    "main.css": "/laptop-design/static/css/main.2d52c2c6.css",
-    "main.js": "/laptop-design/static/js/main.9a0ab323.js",
+    "main.css": "/laptop-design/static/css/main.06c1ddf3.css",
+    "main.js": "/laptop-design/static/js/main.165daa3f.js",
+    "static/media/wallpaper.jpg": "/laptop-design/static/media/wallpaper.a7370aa2d081f25d2bd5.jpg",
+    "static/media/Profile.png": "/laptop-design/static/media/Profile.57bea3e2c1e6ec38d7e6.png",
     "static/media/hp_Logo.png": "/laptop-design/static/media/hp_Logo.2c61005ac0d76eefa795.png",
     "static/media/coverBlur.jpg": "/laptop-design/static/media/coverBlur.4382532e1c94bea4ff5a.jpg",
     "static/media/cover.jpg": "/laptop-design/static/media/cover.36c0bb02038565e08f97.jpg",
-    "static/media/Profile.png": "/laptop-design/static/media/Profile.33e44432bbee4b4bfa0b.png",
+    "static/media/celebrate.jpg": "/laptop-design/static/media/celebrate.c661c892f50f4012c39b.jpg",
+    "static/media/desktop.JPG": "/laptop-design/static/media/desktop.6eb24f1f6a90b414b325.JPG",
     "static/media/webcam.png": "/laptop-design/static/media/webcam.18efcd4c77bda70a474e.png",
+    "static/media/taskbar.png": "/laptop-design/static/media/taskbar.0d047ef92f7958f852fb.png",
     "index.html": "/laptop-design/index.html",
-    "main.2d52c2c6.css.map": "/laptop-design/static/css/main.2d52c2c6.css.map",
-    "main.9a0ab323.js.map": "/laptop-design/static/js/main.9a0ab323.js.map"
+    "main.06c1ddf3.css.map": "/laptop-design/static/css/main.06c1ddf3.css.map",
+    "main.165daa3f.js.map": "/laptop-design/static/js/main.165daa3f.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d52c2c6.css",
-    "static/js/main.9a0ab323.js"
+    "static/css/main.06c1ddf3.css",
+    "static/js/main.165daa3f.js"
   ]
 }
