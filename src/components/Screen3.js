@@ -8,6 +8,7 @@ const Screen3 = ({ fingerScan, handleFourth }) => {
   const [welcome, setWelcome] = useState(false);
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
+  const [focus, setFocus] = useState(false);
 
   const onSubmit = () => {
     if (password !== "1234") {
@@ -77,9 +78,10 @@ const Screen3 = ({ fingerScan, handleFourth }) => {
   return (
     <div className="screen3 bg-cover bg-coverBlur bg-no-repeat bg-center h-full w-full flex p-[1%]">
       <Left />
-      <div className="middle basis-8/12 text-white flex flex-col justify-center gap-2 items-center">
+      <div className="middle basis-8/12 text-white flex flex-col justify-center xs:gap-1 sm:gap-2 items-center">
         <img
-          className="rounded-full w-[20%] h-1/4"
+          className={`${focus ? "xs:invisible" : "xs:visible"
+            } sm:visible rounded-full w-[20%] h-1/4`}
           src={profile}
           alt="profile"
         />
@@ -129,6 +131,12 @@ const Screen3 = ({ fingerScan, handleFourth }) => {
                   setPassword(e.target.value);
                   setError(false);
                 }}
+                onFocus={() => {
+                  setFocus(true);
+                }}
+                onBlur={() => {
+                  setFocus(false);
+                }}
               />
               <i
                 onClick={() => setShowPassword(!showPassword)}
@@ -142,7 +150,11 @@ const Screen3 = ({ fingerScan, handleFourth }) => {
             </div>
             <div className="signinOptions flex flex-col gap-2">
               <p className="text-xs">Sign-in options</p>
-              <div className="keyandfinger flex justify-center">
+              <div
+                className={`${focus ? "xs:invisible" : "xs:visible"}
+                     sm:visible keyandfinger flex justify-center
+                `}
+              >
                 <i
                   className="fa fa-key bg-slate-800 p-[2%] border-2 border-transparent hover:border-white active:border-white active:scale-110"
                   aria-hidden="true"

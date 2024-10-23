@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BasePanel from "./BasePanel";
 import TopPanel from "./TopPanel";
 
@@ -40,6 +40,12 @@ const Laptop = () => {
     setcelebrate(value);
   }
 
+  useEffect(() => {
+    if (!power) {
+      setcelebrate(false);
+    }
+  }, [power]);
+
   const handleShutDown = () => {
     setShuttingDown(true);
     setTimeout(() => {
@@ -72,12 +78,18 @@ const Laptop = () => {
           handleFingerScan={handleFingerScan}
         />
       </div>
-      <button
-        onClick={keyboardToggle}
-        className="text-white bg-gradient-to-br from-purple-700 to-blue-600 active:scale-110 transition ease-in duration-900 sm:w-40 hover:bg-gradient-to-bl  hover:scale-105 font-semibold rounded-lg text-xl p-2 shadow-lg text-center"
-      >
-        {show ? "Hide" : "Show"} Keyboard
-      </button>
+      <div>
+        <button
+          onClick={keyboardToggle}
+          className="text-white bg-gradient-to-br from-purple-700 to-blue-600 active:scale-110 transition ease-in duration-900 sm:w-40 hover:bg-gradient-to-bl  hover:scale-105 font-semibold rounded-lg text-xl p-2 shadow-lg text-center"
+        >
+          {show ? "Hide" : "Show"} Keyboard
+        </button>
+        <ul className="guide text-white mt-4 text-center list-none">
+          <li>Press Power Key</li>
+          <li>Password : 1234</li>
+        </ul>
+      </div>
     </div>
   );
 }
